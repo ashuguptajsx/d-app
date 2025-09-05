@@ -9,6 +9,8 @@ import {
 import { clusterApiUrl } from '@solana/web3.js';
 import RequestAirdrop from './RequestAirdrop';
 import ShowBalance from './ShowBalance';
+import SendTokens from './SendTokens';
+import SignMessage from './SignMessage';
 
 import "@solana/wallet-adapter-react-ui/styles.css";
 import './App.css';
@@ -27,8 +29,8 @@ const App = () => {
           {/* <  */}
           <ShowBalance />
           {/* <Tokens /> */}
-          {/* <SignMessage /> */}
-          {/* <SendTokens /> */}
+          <SignMessage />
+          <SendTokens />
         </WalletModalProvider>
     </WalletProvider>
 </ConnectionProvider>
