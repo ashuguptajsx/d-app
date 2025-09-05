@@ -1,17 +1,18 @@
 import React from 'react'
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
-import {connection} from "@solana/web3.js";
+import { Connection } from '@solana/web3.js';
+import { LAMPORTS_PER_SOL } from '@solana/web3.js';
 
  
 const RequestAirdrop = () => {
-
+ 
     const wallet = useWallet();
-    const conn = useConnection();
+    const {connection }= useConnection();
 
     function requestAirdrop(){
        const publickey = wallet.publicKey;
        const amount = document.getElementById("amount").value;
-       connection.requestAirdrop(publickey, amount );
+       connection.requestAirdrop(publickey, amount * LAMPORTS_PER_SOL);
     }
 
   return (

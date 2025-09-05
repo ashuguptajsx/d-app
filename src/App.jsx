@@ -8,6 +8,7 @@ import {
 } from '@solana/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
 import RequestAirdrop from './RequestAirdrop';
+import ShowBalance from './ShowBalance';
 
 import "@solana/wallet-adapter-react-ui/styles.css";
 import './App.css';
@@ -23,8 +24,8 @@ const App = () => {
             <WalletMultiButton />
             <WalletDisconnectButton />
           </div>
-          <RequestAirdrop />
-          {/* <ShowSolBalance /> */}
+          {/* <  */}
+          <ShowBalance />
           {/* <Tokens /> */}
           {/* <SignMessage /> */}
           {/* <SendTokens /> */}
